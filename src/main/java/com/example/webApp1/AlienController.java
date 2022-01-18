@@ -81,8 +81,7 @@ public class AlienController {
 
     @DeleteMapping("/alien/{aid}")
     public String deleteAlien(@PathVariable int aid) {
-        Alien a = repo.getById(aid);
-        repo.delete(a);
+        repo.deleteById(aid);
         return "Deleted";
     }
 
